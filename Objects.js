@@ -59,11 +59,20 @@ const words = {
     console.log(newWords); 
 
 
-const clothes = {
-    shirts: ['long sleeve','short sleeve','polka dots','striped'],
-    pants:  ['boot cut','skinny jeans','baggy jeans','ripped jeans'], 
-    shoes:  ['nikes','addidas', 'vans','supras'], 
-    hats:   ['beanies', 'caps','snapbacks','fitted'],
+const catalog = {
+
+    'KRTHG345': 10, 
+    'HSNTHG432': 12,
+    'OTYIUMM678':24,
+    'THYNGHE579': 90,
 }
+
+let sku = '';
+while (sku !== 'quit') {
+sku = prompt('Enter SKU or "quit" to exit: ');
+let price = catalog[sku];
+if (sku !== 'quit') alert(`The price of ${sku} is ${price}`);
+}
+
 
 

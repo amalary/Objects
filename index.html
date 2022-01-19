@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+const catalog = {
+
+'KRTHG345': 10, 
+'HSNTHG432': 12,
+'OTYIUMM678':24,
+'THYNGHE579': 90,
+}
+
+let sku = '';
+while (sku !== 'quit') {
+sku = prompt('Enter SKU or "quit" to exit: ');
+let price = catalog[sku];
+if (sku !== 'quit') alert(`The price of ${sku} is ${price}`);
+}
+
+
+
+
+    </script>
+    
+</body>
+</html>
