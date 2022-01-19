@@ -59,6 +59,7 @@ const words = {
     console.log(newWords); 
 
 
+// Part 1 
 const catalog = {
 
     'KRTHG345': 10, 
@@ -72,6 +73,32 @@ while (sku !== 'quit') {
 sku = prompt('Enter SKU or "quit" to exit: ');
 let price = catalog[sku];
 if (sku !== 'quit') alert(`The price of ${sku} is ${price}`);
+}
+
+// Part 2 
+
+
+const catalog = {
+
+    'KRTHG345': 10, 
+    'HSNTHG432': 12,
+    'OTYIUMM678':24,
+    'THYNGHE579': 90,
+}
+
+
+
+
+let sku = '';
+while (sku !== 'quit') {
+  sku = prompt('Enter SKU or "quit" to exit: ');
+  if (sku in catalog) {
+    let price = catalog[sku];
+alert(`The price of ${sku} is ${price}`); } 
+
+else if (sku !== 'quit') {
+alert('Invalid SKU - try again');
+}
 }
 
 
