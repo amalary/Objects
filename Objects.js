@@ -179,3 +179,38 @@ video.stop = function (){
 }
 
 video.stop(); 
+
+function Video(title){
+
+    this.title = title; 
+    console.log(this); 
+}
+
+const v = new Video('abc');
+
+const video = {
+    title: 'a',
+    tags: ['a','b','c'],
+    showTags(){
+        this.tags.forEach(function(tag){
+            console.log(this.title,tag)
+        }, this)
+    }
+
+}
+video.showTags(); 
+
+// Building Methods 
+
+const batman = {
+    persona: 'Batman',
+    indentity: "Bruce Wayne", 
+    health: 100, 
+    damage: 30, 
+    // Method
+    revealIdentity(){
+        console.log(`I am ${this.indentity}!`);
+    }
+}
+
+batman.revealIdentity();
