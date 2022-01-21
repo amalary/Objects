@@ -214,3 +214,21 @@ const batman = {
 }
 
 batman.revealIdentity();
+
+const batman = {
+    persona: 'Batman',
+    indentity: "Bruce Wayne", 
+    health: 100, 
+    damage: 30, 
+    // Method
+    revealIdentity(){
+        console.log(`I am ${this.indentity}!`);
+    },
+
+    // Second Method 
+    takeDamage(amount){
+        return this.health = this.health - amount; 
+    }
+}
+
+console.log(batman.takeDamage(20)); 
