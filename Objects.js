@@ -101,5 +101,81 @@ alert('Invalid SKU - try again');
 }
 }
 
+// Deleting a Property
+
+const geniuses = {
+
+    Einstein: true, 
+    Newton: true, 
+    Snooki: false,
+}; 
+
+delete geniuses.Snooki; 
+
+console.log(geniuses);
 
 
+const game = {
+    videoGame: "Super Mario",
+    gameSystem:"Nintendo 64",
+    favorite: 'Killer Instinct', 
+    leastFavorite: 'Spyro',
+}; 
+
+// for(let key in game){
+//     console.log(`The value of the ${key} property is ${game[key]}`); 
+// }
+
+Object.values(game).forEach(function(val){
+    console.log(val); 
+})
+
+// Property Shorthand Syntax
+
+const latitude = getLat('Disneyland');
+const longitude = getLng('Disneyland');
+
+const locationg = {
+    name: 'Disneyland',
+    latitude: 'latitude',
+    longitude: 'longitude',
+}
+
+const latitude = getLat('Disneyland');
+const longitude = getLng('Disneyland');
+const location = {
+    name: 'Disneyland',
+    latitude,
+    longitude,
+};
+
+// Methods
+
+const game = {
+    videoGame: "Super Mario",
+    gameSystem:"Nintendo 64",
+    favorite: 'Killer Instinct', 
+    leastFavorite: 'Spyro',
+}; 
+
+game.play = function (){
+
+    this.secretNum = Math.floor(Math.random() *
+    (this.biggestNum - this.smallestNum +1)) + this.smallestNum;
+}
+
+console.log(game.play());
+
+const video = {
+    title: 'a', 
+    play() {
+        console.log(this); 
+    }
+};
+video.play()
+
+video.stop = function (){
+    console.log(this)
+}
+
+video.stop(); 
