@@ -15,8 +15,10 @@ console.log(point);
 // Properties are separated by commas
 
 const game = {
+
     videoGame: "Super Mario",
-    gameSystem:"Nintendo 64" 
+    gameSystem:"Nintendo 64", 
+
 }
 
 console.log(game); 
@@ -24,6 +26,7 @@ console.log(game);
 // Syntactically, trailing commas are permitted and encouraged (as well as in arrays too)
 
 const game = {
+
     videoGame: "Super Mario",
     gameSystem:"Nintendo 64",
 }
@@ -99,7 +102,8 @@ alert(`The price of ${sku} is ${price}`); }
 else if (sku !== 'quit') {
 alert('Invalid SKU - try again');
 }
-}
+
+};
 
 // Deleting a Property
 
@@ -229,6 +233,7 @@ const batman = {
     takeDamage(amount){
         return this.health = this.health - amount; 
     }
-}
+};
 
-console.log(batman.takeDamage(20)); 
+
+console.log(batman.takeDamage(20));
